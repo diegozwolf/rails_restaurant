@@ -1,0 +1,18 @@
+<%= form_for(@order) do |f| %>
+
+    <% if @order.errors.any? %>
+        <ul>
+          <% @order.errors.full_messages do |msg|%>
+          <li><%= msg.to_s%></li>
+        </ul>
+        <% end %>
+    <% end %>
+
+    <%= f.label :board %>
+    <%= f.text_field :board %>
+
+    <%= f.label :waiter %>
+    <%= f.text_field :waiter %>
+
+    <%= f.submit %>
+<% end %>

@@ -1,0 +1,20 @@
+# == Schema Information
+#
+# Table name: oders
+#
+#  id         :integer          not null, primary key
+#  waiter     :string
+#  board      :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  waiter: MyString
+  board: MyString
+
+two:
+  waiter: MyString
+  board: MyString

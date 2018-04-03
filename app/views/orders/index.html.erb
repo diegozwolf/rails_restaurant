@@ -1,0 +1,30 @@
+<h2>Ordenes</h2>
+<hr>
+
+<%= link_to 'Nuevo', new_order_path %>
+
+<!-- <%=  @orders.inspect  %></p> -->
+<table class="table">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>Mesero</th>
+      <th>Mesa</th>
+      <th>Detalle</th>
+      <th>Editar</th>
+      <th>Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @orders.each do |order| %>
+    <tr>
+      <td><%= order.id %></td>
+      <td><%= order.waiter %></td>
+      <td><%= order.board %></td>
+      <td><%= link_to "D", order_path(order) %></td>
+      <td><%= link_to "E", edit_order_path(order) %></td>
+      <td><%= link_to "X", order_path(order), method: :delete,  data: {confirm: '¿Estas seguro?'} %></td>
+    </tr>
+  </tbody>
+  <%end%>
+</table>
