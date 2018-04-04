@@ -19,7 +19,7 @@
     <% @orders.each do |order| %>
     <tr>
       <td><%= order.id %></td>
-      <td><%= order.waiter %></td>
+      <td><%= "Nombre" %></td>
       <td><%= order.board %></td>
       <td><%= link_to "D", order_path(order) %></td>
       <td><%= link_to "E", edit_order_path(order) %></td>

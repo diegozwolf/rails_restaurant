@@ -2,7 +2,7 @@
 
     <% if @order.errors.any? %>
         <ul>
-          <% @order.errors.full_messages do |msg|%>
+          <% @order.errors.full_messages.each do |msg|%>
           <li><%= msg.to_s%></li>
         </ul>
         <% end %>
@@ -10,9 +10,10 @@
 
     <%= f.label :board %>
     <%= f.text_field :board %>
-
-    <%= f.label :waiter %>
-    <%= f.text_field :waiter %>
+    <br>
+    
+    <%= f.label :user %>
+    <%= collection_select(:order, :user_id, User.all, :id,:email, prompt: true) %>
 
     <%= f.submit %>
 <% end %>

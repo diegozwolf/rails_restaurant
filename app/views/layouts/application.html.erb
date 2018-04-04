@@ -5,10 +5,42 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.css">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right">
+      <% if user_signed_in? %>
+        <li><%= current_user.email %></li>
+       	<li>
+       		<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+       	</li>
+      <% else %>
+        <li><%= link_to('Sign up', new_user_registration_path)  %></li>
+       	<li>
+       		<%= link_to('Login', new_user_session_path)  %>
+       	</li>
+       <% end %>
+    </ul>
+    </div>
+  </div>
+</nav>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xs-8">
+            <%= yield %>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>

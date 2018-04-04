@@ -11,7 +11,7 @@
 
 class Order < ApplicationRecord
   has_many :plates
-
+  belongs_to :user
   # validaciones
   validates :board, presence: true
 end

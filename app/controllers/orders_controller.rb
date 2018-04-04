@@ -1,4 +1,6 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user!, except: [:index]
+
   def index
     @orders = Order.all
   end
@@ -33,7 +35,7 @@ class OrdersController < ApplicationController
     end
   end
   def destroy
-    order = Order.find (params[:id])
+    order = Order.find(params[:id])
     order.destroy
     redirect_to orders_path
   end
@@ -41,6 +43,6 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:board, :waiter)
+    params.require(:order).permit(:board, :user_idr)
   end
 end
