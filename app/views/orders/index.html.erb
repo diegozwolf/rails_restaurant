@@ -1,7 +1,7 @@
 <h2>Ordenes</h2>
 <hr>
 
-<%= link_to 'Nuevo', new_order_path %>
+<%= link_to 'Nuevo', new_order_path if user_signed_in? %>
 
 <!-- <%=  @orders.inspect  %></p> -->
 <table class="table">
