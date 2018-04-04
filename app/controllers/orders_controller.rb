@@ -1,6 +1,5 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
-
   def index
     @orders = Order.all
   end
@@ -17,8 +16,9 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
     if @order.save
       redirect_to @order
+      #redirect_to order_path(@order.id)
     else
-      render new
+      render :new
     end
   end
 
@@ -34,6 +34,7 @@ class OrdersController < ApplicationController
       render :edit
     end
   end
+
   def destroy
     order = Order.find(params[:id])
     order.destroy
@@ -41,8 +42,7 @@ class OrdersController < ApplicationController
   end
 
   private
-
   def order_params
-    params.require(:order).permit(:board, :user_idr)
+    params.require(:order).permit(:board, :user_id)
   end
 end

@@ -63,22 +63,32 @@ $white: #f3f3f3;
 }
 //register panels
 .dashed-panel {
-  color: white !important;
+  color: $white !important;
   background-color: transparent !important;
-  margin-top: 60px !important;
+  margin-top: 40px !important;
   border: 2px dashed $white !important;
   border-radius: 20px !important;
 }
 //logo styles
 .logo-cont{
-  border: 2px dashed white;
+  border: 2px dashed $white;
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  color: white;
+  color: $white;
   margin: 0 auto;
 }
 .logo-image{
   font-size:45px;
+  margin: 0 auto;
+}
+.logo-con-txt{
+    margin-bottom: 30px;
+}
+.logo-txt{
+  font-family: 'Caveat Brush';
+  font-size: 40px;
+  color: $white;
+  font-weight: 500;
   margin: 0 auto;
 }
