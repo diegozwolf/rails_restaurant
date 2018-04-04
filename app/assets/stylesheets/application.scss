@@ -13,3 +13,32 @@
  */
 @import "bootstrap";
 @import "devise_bootstrap_views";
+
+// flexbox
+.flex {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.flex-row{
+    flex-direction: row;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+.flex-row{
+    flex-direction: column;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+// Navbar
+.navbar-default{
+  height: 60px;
+  background-image: linear-gradient(to bottom, #FF8A80 0%, #FF1744 100%) !important;
+}
+
+.navbar-default .navbar-nav > li > a{
+  color: white !important;
+}
