@@ -39,6 +39,7 @@ gem 'devise-bootstrap-views'
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'seed_dump'
+gem 'font-awesome-sass', '~> 5.0.9'
 
 
 group :development, :test do

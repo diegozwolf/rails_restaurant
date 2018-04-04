@@ -11,8 +11,12 @@
  * It is generally better to create a new file per style scope
  *= require devise_bootstrap_views
  */
+
+// Imports
 @import "bootstrap";
 @import "devise_bootstrap_views";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 $purple1:#AB47BC;
 $purple2:#6A1B9A;
@@ -58,10 +62,23 @@ $white: #f3f3f3;
   height: 655px;
 }
 //register panels
-.yeah {
+.dashed-panel {
   color: white !important;
   background-color: transparent !important;
   margin-top: 60px !important;
   border: 2px dashed $white !important;
   border-radius: 20px !important;
+}
+//logo styles
+.logo-cont{
+  border: 2px dashed white;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  color: white;
+  margin: 0 auto;
+}
+.logo-image{
+  font-size:45px;
+  margin: 0 auto;
 }
