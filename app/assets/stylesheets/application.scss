@@ -135,7 +135,11 @@ $white: #f3f3f3;
   font-size: 18px;
 }
 .red-icon{
-  color: red;
+  color: #E53935;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 800;
+}
+.red-icon:hover{
+  color: #B71C1C;
+  text-decoration: none;
 }
