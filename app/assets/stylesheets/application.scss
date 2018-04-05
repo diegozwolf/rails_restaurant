@@ -35,7 +35,7 @@ $white: #f3f3f3;
     justify-items: center;
     align-items: center;
 }
-.flex-row{
+.flex-column{
     flex-direction: column;
     display: flex;
     justify-items: center;
@@ -48,8 +48,10 @@ $white: #f3f3f3;
   background: $purple1 !important;
 }
 
-.navbar-default .navbar-nav > li > a{
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > i{
   color: $white !important;
+  display: inline;
 }
 // Body container
 .purple-body{
@@ -92,4 +94,48 @@ $white: #f3f3f3;
   color: $white;
   font-weight: 500;
   margin: 0 auto;
+}
+
+// Buttons
+
+.btn-yummi{
+    background: $purple2;
+    color: $white;
+    margin:0 auto;
+}
+.btn-yummi:hover{
+    background: $purple1;
+    color: $white !important;
+}
+.btn-yummi-outline{
+    border:2px solid $purple2 !important;
+    background: none !important;
+    color: $purple2 !important;
+    font-family: 'Caveat Brush';
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    margin:0 auto;
+}
+.btn-yummi-outline:hover{
+  color: $purple1 !important;
+}
+// texts
+.title-purple{
+  color: $purple2;
+  font-weight: 600;
+  display: inline;
+  font-size: 12px;
+}
+.txt-undeline{
+  border-bottom: 2px dashed $purple2;
+}
+//icon
+.icon-crud{
+  color: $purple2;
+  font-size: 18px;
+}
+.red-icon{
+  color: red;
+  font-size: 18px;
+  font-weight: 600;
 }
