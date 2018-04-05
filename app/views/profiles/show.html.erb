@@ -1,0 +1,10 @@
+
+<div class="col-xs-12">
+  <h1>Show Profile</h1>
+  <% if @profile %>
+    <%= @profile.inspect %>
+    <%= link_to "Editar", edit_profile_path(@profile)  %>
+  <%else %>
+    <%= link_to "Crear", new_profile_path %>
+  <% end %>
+</div>

@@ -1,19 +1,23 @@
-<%= form_for(@order) do |f| %>
+<div class="col-xs-8">
+
+  <%= form_for(@order) do |f| %>
 
     <% if @order.errors.any? %>
-        <ul>
-          <% @order.errors.full_messages.each do |msg|%>
-          <li><%= msg.to_s%></li>
-        </ul>
-        <% end %>
+      <ul>
+        <% @order.errors.full_messages.each do |msg| %>
+          <li> <%= msg.to_s %> </li>
+        <% end%>
+      </ul>
     <% end %>
 
     <%= f.label :board %>
     <%= f.text_field :board %>
     <br>
-    
-    <%= f.label :user %>
-    <%= collection_select(:order, :user_id, User.all, :id,:email, prompt: true) %>
+
+    <%= f.label :user_id %>
+    <%= collection_select(:order, :user_id, User.all, :id, :email, prompt: true) %>
+    <br>
 
     <%= f.submit %>
-<% end %>
+  <% end %>
+</div>

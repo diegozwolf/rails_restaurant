@@ -1,4 +1,18 @@
-<dic class="colxs-6">
-  <h1>New order</h1>
-  <%= @order.inspect %>
-</dic>
+<dic class="colxs-6 ">
+  <div class="hipster-box"><h1>Order</h1></div>
+  <!-- <%= @order.inspect %> -->
+
+   <div class="col-xs-12">
+
+     <div class="card" style="width: 18rem;">
+       <img class="card-img-top" src="https://thumbs.dreamstime.com/b/placa-con-los-pescados-la-bifurcaci%C3%B3n-el-cuchillo-y-el-sombrero-de-los-cocineros-tarjeta-del-men%C3%BA-plato-de-la-comida-del-72521675.jpg" alt="Card image cap">
+       <div class="card-body">
+         <h5 class="card-title">Order: <%= @order.id %></h5>
+         <p class="card-text">Waiter: <%= @order.user_id %> </p>
+         <p class="card-text">Order at: <%= @order.created_at %> </p>
+         <p class="card-text">Updated at: <%= @order.updated_at %> </p>
+       </div>
+     </div>
+   </div>
+
+</div>

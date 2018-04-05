@@ -13,6 +13,7 @@
  */
 
 // Imports
+@import "*";
 @import "bootstrap";
 @import "devise_bootstrap_views";
 @import "font-awesome-sprockets";
@@ -57,7 +58,7 @@ $white: #f3f3f3;
   background-image: linear-gradient(to bottom, $purple1 0%,$purple2  100%) !important;
   height: 655px !important;
 }
-.white-Body{
+.white-body{
   background: $white !important;
   height: 655px;
 }
