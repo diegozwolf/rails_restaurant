@@ -14,4 +14,12 @@ class Order < ApplicationRecord
   belongs_to :user
   # validaciones
   validates :board, presence: true
+
+  def profile
+    user.profile
+  end
+
+  def user_name
+    profile.name
+  end
 end

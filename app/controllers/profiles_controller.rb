@@ -1,6 +1,7 @@
 class ProfilesController < ApplicationController
 
   before_action :authenticate_user!
+  skip_before_action :signed_in_no_profile, only: [:new, :create]
 
   def show
     @profile = current_user.profile
@@ -26,7 +27,7 @@ class ProfilesController < ApplicationController
   def create
     @profile = Profile.new(profile_params)
     if @profile.save
-      redirect_to :profile
+      redirect_to :orders
     else
       render :new
     end

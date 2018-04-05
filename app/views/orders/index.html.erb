@@ -20,7 +20,7 @@
       <% @orders.each do |order| %>
       <tr>
         <td><%= order.id %></td>
-        <td><%= "Nombre" %></td>
+        <td><%= order.profile.name.to_s + " " +order.profile.last_name.to_s %></td>
         <td><%= order.board %></td>
         <td><%= link_to "D", order_path(order) %></td>
         <td><%= link_to "E", edit_order_path(order) %></td>
