@@ -7,6 +7,17 @@
     <div class="card" style="width: 16rem;">
       <img class="card-img-top" src="https://thumbs.dreamstime.com/b/placa-con-los-pescados-la-bifurcaci%C3%B3n-el-cuchillo-y-el-sombrero-de-los-cocineros-tarjeta-del-men%C3%BA-plato-de-la-comida-del-72521675.jpg" alt="Card image cap">
       <div class="card-body">
+
+        <div class="col-12 flex-end">
+          <p class="title-purple">
+            Edit
+            <%= link_to edit_order_path(@order) do %>
+            <i class="fas fa-edit icon-crud"></i>
+            <% end %>
+          </p>
+        </div>
+
+
         <h5 class="card-title"><p class="title-purple"> Order: </p> <%= @order.id %></h5>
         <p class="card-text"><p class="title-purple"> Waiter: </p> <%= @order.profile.name.to_s + " " +@order.profile.last_name.to_s %></p>
         <p class="card-text"><p class="title-purple"> Order at: </p>Order at: <%= @order.created_at %> </p>

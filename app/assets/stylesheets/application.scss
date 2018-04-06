@@ -41,6 +41,10 @@ $white: #f3f3f3;
     justify-items: center;
     align-items: center;
 }
+.flex-end{
+  display: flex;
+  justify-content: flex-end;
+}
 // Navbar
 .navbar-default{
   height: 60px;
