@@ -45,3 +45,22 @@ th,td {
 .cont-create-btn{
   margin-bottom:30px;
 }
+// panel
+.panel-default{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22) !important;
+  margin: 0 auto !important;
+}
+.cont_order_btn-f{
+  margin-top: 20px;
+}
+label {
+  color: $purple2;
+}
+select{
+  background: white;
+  height: 30px;
+  width: 100%;
+}
+.cont-back-form{
+  margin-top: 25px;
+}
