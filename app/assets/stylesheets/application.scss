@@ -72,7 +72,8 @@ $white: #f3f3f3;
 .dashed-panel {
   color: $white !important;
   background-color: transparent !important;
-  margin-top: 40px !important;
+  margin-top: 50px !important;
+  margin: 0 auto;
   border: 2px dashed $white !important;
   border-radius: 20px !important;
 }
@@ -84,6 +85,7 @@ $white: #f3f3f3;
   border-radius: 50%;
   color: $white;
   margin: 0 auto;
+  margin-bottom: 20px
 }
 .logo-image{
   font-size:45px;
