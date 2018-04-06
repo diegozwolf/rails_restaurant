@@ -7,21 +7,21 @@
     <div class="panel-body">
       <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: 'form' }) do |f| %>
       <div class="form-group">
-        <%= f.label :email %>
+        <%= f.label :email, class: 'label-sign' %>
         <%= f.email_field :email, autofocus: true, class: 'form-control' %>
       </div>
       <div class="form-group">
-        <%= f.label :password %>
+        <%= f.label :password, class: 'label-sign' %>
         <%= f.password_field :password, autocomplete: 'off', class: 'form-control' %>
       </div>
       <% if devise_mapping.rememberable? %>
-      <div class="checkbox">
-        <%= f.label :remember_me do %>
-        <%= f.check_box :remember_me %> <%= t('.remember_me', default: 'Remember me') %>
+      <div class="checkbox flex-row">
+        <%= f.label :remember_me, class: 'label-sign'  do %>
+        <%= f.check_box :remember_me, class:'check-box' %> <%= t('.remember_me', default: 'Remember me') %>
         <% end %>
       </div>
       <% end %>
-      <%= f.submit  t('.sign_in', default: 'Sign in'), class: 'btn btn-primary' %>
+      <%= f.submit  t('.sign_in', default: 'Sign in'), class: 'btn btn-login' %>
       <% end %>
     </div>
   </div>

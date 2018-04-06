@@ -49,7 +49,7 @@ $white: #f3f3f3;
 .navbar-default{
   height: 60px;
   border: none !important;
-  background: $purple1 !important;
+  background: #C2185B !important;
 }
 
 .navbar-default .navbar-nav > li > a,
@@ -61,7 +61,7 @@ $white: #f3f3f3;
 .purple-body{
   background-size:cover;
   background-repeat: no-repeat;
-  background-image: linear-gradient(to bottom, $purple1 0%,$purple2  100%) !important;
+  background-image: linear-gradient(to bottom, #C2185B 0%,$purple2  100%) !important;
   height: 655px !important;
 }
 .white-body{
@@ -76,6 +76,7 @@ $white: #f3f3f3;
   margin: 0 auto;
   border: 2px dashed $white !important;
   border-radius: 20px !important;
+  width: 100%;
 }
 //logo styles
 .logo-cont{

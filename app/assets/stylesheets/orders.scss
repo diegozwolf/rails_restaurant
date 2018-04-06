@@ -57,6 +57,29 @@ th,td {
 label {
   color: $purple2;
 }
+.label-sign{
+  color: white !important;
+}
+.check-box{
+  position: absolute;
+  left: -180px;
+  color: $purple1;
+}
+.btn-login{
+  border:2px solid $white !important;
+  background: none !important;
+  color: $white;
+  font-size: 16px;
+  font-weight: 600;
+}
+.link-a{
+  color: white !important;
+  display: inline;
+}
+.link-a:focus{
+  color: #f7f7f7 !important;
+  font-size: 800;
+}
 select{
   background: white;
   height: 30px;
