@@ -16,7 +16,7 @@
         </div>
         <div class="form-group">
           <%= f.label :user_id %>
-          <%= collection_select(:order, :user_id, User.all, :id, :email, prompt: true) %>
+          <%= collection_select(:order, :user_id, Profile.all, :id, :name, prompt: true) %>
         <div>
         <div class="col-12 cont_order_btn-f flex">
           <%= f.submit class: 'btn btn-yummi' %>
