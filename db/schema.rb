@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180404235916) do
+ActiveRecord::Schema.define(version: 20180406013744) do
 
   create_table "orders", force: :cascade do |t|
     t.integer "board"
@@ -20,15 +20,20 @@ ActiveRecord::Schema.define(version: 20180404235916) do
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
+  create_table "orders_plates", id: false, force: :cascade do |t|
+    t.integer "order_id", null: false
+    t.integer "plate_id", null: false
+    t.index ["order_id"], name: "index_orders_plates_on_order_id"
+    t.index ["plate_id"], name: "index_orders_plates_on_plate_id"
+  end
+
   create_table "plates", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.decimal "price", precision: 10, scale: 2
     t.boolean "available"
-    t.integer "order_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["order_id"], name: "index_plates_on_order_id"
   end
 
   create_table "profiles", force: :cascade do |t|

@@ -1,16 +1,16 @@
 # == Schema Information
 #
-# Table name: oders
+# Table name: orders
 #
 #  id         :integer          not null, primary key
-#  waiter     :string
 #  board      :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  user_id    :integer
 #
 
 class Order < ApplicationRecord
-  has_many :plates
+  has_and_belongs_to_many :plates
   belongs_to :user
   # validaciones
   validates :board, presence: true

@@ -1,4 +1,4 @@
-<div class="col-xs-12 flex-column">
+    <div class="col-xs-12 flex-column">
   <div class="panel panel-default devise-bs">
     <div class="panel-body">
       <%= form_for(@order) do |f| %>
@@ -12,7 +12,7 @@
         <% end %>
         <div class="form-group">
           <%= f.label :board %>
-          <%= f.text_field :board %>
+          <%= f.text_field :board, class:"field-input"%>
         </div>
         <div class="form-group">
           <%= f.label :user_id %>

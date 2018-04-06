@@ -1,4 +1,7 @@
 <div class="col-xs-6">
-  <h1>New</h1>
+  <h2 class="txt-undeline">New Employee</h2>
+  <% if @profile %>
+      <p class="greet">Hi,before we start we need this information ;)</p>
+  <% end%>
   <%= render 'form' %>
 </div>

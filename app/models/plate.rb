@@ -7,11 +7,10 @@
 #  description :string
 #  price       :decimal(10, 2)
 #  available   :boolean
-#  order_id    :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
 
 class Plate < ApplicationRecord
-  belongs_to :order
+  has_and_belongs_to_many :orders
 end

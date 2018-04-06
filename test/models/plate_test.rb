@@ -7,7 +7,6 @@
 #  description :string
 #  price       :decimal(10, 2)
 #  available   :boolean
-#  order_id    :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
