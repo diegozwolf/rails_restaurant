@@ -95,7 +95,7 @@ GEM
     diffy (3.2.0)
     erubi (1.7.1)
     execjs (2.7.0)
-    ffi (1.9.23)
+    ffi (1.12.2)
     font-awesome-sass (5.0.9)
       sass (>= 3.2)
     globalid (0.4.1)
